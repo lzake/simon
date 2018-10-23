@@ -1,16 +1,27 @@
 
 header{
+    display:grid;
     grid-column: 1;
     grid-row: 1;
-    border: 1px black solid;
+    align-items: end;
+    text-align: center;
+    /* border: 1px black solid; */
 }
+
+/* As with align-self and align-items, you can apply justify-items to the grid container, to set the justify-self value for all items. */
 
 main{
     grid-column: 1;
     grid-row: 2;
-    border: 1px black solid;
+    /* border: 1px black solid; */
     list-style: none;
 }
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto auto 35px auto
+}
+
 
 .gameboard{
     display: grid;
@@ -23,6 +34,7 @@ main{
     grid-column: 2;
     grid-row: 1;
     background-color: #F53240;
+    /* background-color: #EDA917; */
     border-top-right-radius: 100%;
   }
   
@@ -30,24 +42,36 @@ main{
     grid-column: 2;
     grid-row: 2;
     background-color: #7cdbd5;
+    /* background-color: #ED8517; */
+    border-bottom-right-radius: 100%;
   }
   
   .yellow{
     grid-column: 1;
     grid-row: 2;
     background-color: #F9BE02;
+    /* background-color: #ED5417; */
+    border-bottom-left-radius: 100%;
   }
   
   .green{
     grid-column: 1; 
     grid-row: 1;
     background-color: #02C8A7;
+    /* background-color: #ED1762; */
+    border-top-left-radius: 100%;
   }
 
 nav{
+    display: flex;
+    justify-content: center;
     grid-column: 1;
     grid-row: 3;
-    border: 1px black solid;
+    /* border: 1px black solid; */
+}
+
+a{
+    margin: 40px 20px 20px 20px;
 }
 
 body{
