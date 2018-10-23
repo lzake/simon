@@ -1,24 +1,60 @@
 
 header{
-    display: flex;
-    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
     border: 1px black solid;
-    height: 20.5%;
 }
 
 main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
     border: 1px black solid;
-    height: 60%;
+    list-style: none;
 }
 
+.gameboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.red{
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #F53240;
+    border-top-right-radius: 100%;
+  }
+  
+  .blue{
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #7cdbd5;
+  }
+  
+  .yellow{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #F9BE02;
+  }
+  
+  .green{
+    grid-column: 1; 
+    grid-row: 1;
+    background-color: #02C8A7;
+  }
+
 nav{
-    display: flex;
-    justify-content: center;
+    grid-column: 1;
+    grid-row: 3;
     border: 1px black solid;
-    height: 20%;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px;
+    grid-template-rows: 1fr 400px 1fr;
 }
 
 html, body{
