@@ -7,42 +7,68 @@
 // -gets the buttons to light-up on the console
 // -on delay
 
+
+
+// defines color buttons in array
 let buttons = document.querySelectorAll(".button")
 
-console.log(buttons)
 
+// defines level 1 sequence
 let sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
 
-console.log(sequenceLevel1)
 
+// defines play button
 let playButton = document.querySelector(".buttonPlay")
 
-console.log(playButton)
+
 
 // click play
 playButton.addEventListener('click', function () {
     console.log(sequenceLevel1)
 })
 
-// color buttons
-let selectRed = document.querySelector(".red")
-let selectBlue = document.querySelector(".blue")
-let selectYellow = document.querySelector(".yellow")
-let selectGreen = document.querySelector(".green")
 
 // click color buttons
-selectRed.addEventListener('click', function () {
+buttons[0].addEventListener('click', function () {
     console.log("red button selected")
 })
 
-selectBlue.addEventListener('click', function () {
+buttons[1].addEventListener('click', function () {
     console.log("blue button selected")
 })
 
-selectYellow.addEventListener('click', function () {
+buttons[2].addEventListener('click', function () {
     console.log("yellow button selected")
 })
 
-selectGreen.addEventListener('click', function () {
+buttons[3].addEventListener('click', function () {
     console.log("green button selected")
 })
+
+// change color button colors
+// function changeButtonBackgroundRed () {
+//     selectRed.style.backgroundColor = 'magenta';
+// }
+
+
+
+
+
+
+
+
+// function changeBackgroundColorToBlue () {
+//     // No need to change the content of this function. Don't worry if this code is new to you.
+//     document.body.style.backgroundColor = 'blue';
+//   }
+  
+//   function changeBackgroundColorToRed () {
+//     // No need to change the content of this function. Don't worry if this code is new to you.
+//     document.body.style.backgroundColor = 'red';
+//   }
+  
+//   const buttonRed = document.querySelector('.red')
+//   buttonRed.addEventListener('click', changeBackgroundColorToRed)
+  
+//   const buttonBlue = document.querySelector('.blue')
+//   buttonBlue.addEventListener('click', changeBackgroundColorToBlue)
