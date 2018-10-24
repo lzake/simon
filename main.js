@@ -1,9 +1,18 @@
 
+
 // defines color buttons in array
 let buttons = document.querySelectorAll(".button")
 
+// computer generated level 1 sequence
+let sequenceLevel1 = []
+for (let i = 0; i <= 3; i++) {
+    sequenceLevel1.push(buttons[Math.floor(Math.random() * buttons.length)])
+}   
+console.log(sequenceLevel1)
+
+
 // defines level 1 sequence
-let sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
+// let sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
 
 // defines level 1 user response
 let userResponseLevel1 = []
@@ -64,7 +73,6 @@ function checkForMatch() {
        joinedUserRespLevel1 = stringUserRespLevel1.join()
    }
 
-    console.log('test')
     if (joinedSeqLevel1 === joinedUserRespLevel1) {
         alert('You win!')
     } else {
