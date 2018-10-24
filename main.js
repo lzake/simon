@@ -3,7 +3,7 @@
 let buttons = document.querySelectorAll(".button")
 
 // defines level 1 sequence
-const sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
+let sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
 
 // defines level 1 user response
 let userResponseLevel1 = []
@@ -47,7 +47,6 @@ function handleUserColorButtonPress(colorButton) {
         checkForMatch()
     }
     
-    // to do resolve error. cannot compare arrays. check for match should happen after the user input equals sequenceLevel1.length
 }
 
 
