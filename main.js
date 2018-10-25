@@ -8,11 +8,8 @@ let sequenceLevel1 = []
 for (let i = 0; i <= 3; i++) {
     sequenceLevel1.push(buttons[Math.floor(Math.random() * buttons.length)])
 }   
-console.log(sequenceLevel1)
+// console.log(sequenceLevel1)
 
-
-// defines level 1 sequence
-// let sequenceLevel1 = [buttons[0], buttons[2], buttons[3], buttons[2]]
 
 // defines level 1 user response
 let userResponseLevel1 = []
@@ -93,7 +90,7 @@ function flashColorButtonIndicator(colorButton) {
 
 function showIndicatorsInSequence(levelArray) {
     for (let i = 0; i < levelArray.length; i++) {
-        let delay = (500 * i) + 500;
+        let delay = (1000 * i) + 500;
         setTimeout( function() {
             flashColorButtonIndicator(levelArray[i])
         }, delay)
