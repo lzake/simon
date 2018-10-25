@@ -22,13 +22,13 @@ playButton.addEventListener('click', function(){showIndicatorsInSequence(sequenc
 
 
 // event listeners and handlers for color buttons
-buttons[0].addEventListener('click', function() { handleUserColorButtonPress(buttons[0]) })
+buttons[0].addEventListener('click', function() { receiveUserColorButtonPress(buttons[0]) })
 
-buttons[1].addEventListener('click', function() { handleUserColorButtonPress(buttons[1]) })
+buttons[1].addEventListener('click', function() { receiveUserColorButtonPress(buttons[1]) })
 
-buttons[2].addEventListener('click', function() { handleUserColorButtonPress(buttons[2]) })
+buttons[2].addEventListener('click', function() { receiveUserColorButtonPress(buttons[2]) })
 
-buttons[3].addEventListener('click', function() { handleUserColorButtonPress(buttons[3]) })
+buttons[3].addEventListener('click', function() { receiveUserColorButtonPress(buttons[3]) })
 
 
 function setButtonOpacityFull(colorButton) {
@@ -39,7 +39,7 @@ function setButtonOpacityHalf(colorButton) {
     colorButton.style.opacity = 0.5;
 }
 
-function handleUserColorButtonPress(colorButton) {
+function receiveUserColorButtonPress(colorButton) {
     setButtonOpacityHalf(colorButton);
     setTimeout(
         function() {
@@ -54,6 +54,7 @@ function handleUserColorButtonPress(colorButton) {
     }
     
 }
+
 
 
 function checkForMatch() {

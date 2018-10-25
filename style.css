@@ -29,7 +29,11 @@ h1{
 }
 
 .buttonLevel, .buttonInfo{
+<<<<<<< HEAD
+    font-size: 32px;
+=======
     font-size: 30px;
+>>>>>>> 5a42427961a67ca197936f1745fd18253e37089b
     color: #303030;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
@@ -72,7 +76,7 @@ h1{
   .green{
     grid-column: 1; 
     grid-row: 1;
-    background-color: rgb(45, 161, 146);
+    background-color: rgb(40, 160, 140);
     /* background-color: #ED1762; */
     border-top-left-radius: 100%;
   }
