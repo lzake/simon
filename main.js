@@ -3,19 +3,21 @@
 // defines color buttons in array
 let buttons = document.querySelectorAll(".button")
 
+
 // computer generated level 1 sequence
 let sequenceLevel1 = []
 for (let i = 0; i <= 3; i++) {
     sequenceLevel1.push(buttons[Math.floor(Math.random() * buttons.length)])
 }   
-// console.log(sequenceLevel1)
 
 
 // defines level 1 user response
 let userResponseLevel1 = []
 
+
 // defines play button
 let playButton = document.querySelector(".buttonPlay")
+
 
 // event listener and handler for play button
 playButton.addEventListener('click', function(){showIndicatorsInSequence(sequenceLevel1)})
@@ -35,9 +37,11 @@ function setButtonOpacityFull(colorButton) {
     colorButton.style.opacity = 1;
 }
 
+
 function setButtonOpacityHalf(colorButton) {
     colorButton.style.opacity = 0.5;
 }
+
 
 function receiveUserColorButtonPress(colorButton) {
     setButtonOpacityHalf(colorButton);
@@ -56,15 +60,13 @@ function receiveUserColorButtonPress(colorButton) {
 }
 
 
-
 function checkForMatch() {
-    // computer defined
    for (let i = 0; i < sequenceLevel1.length; i++) {
        let stringSeqLevel1 = []
        stringSeqLevel1.push(sequenceLevel1[i].classList[1])
        joinedSeqLevel1 = stringSeqLevel1.join()
    }
-//    user input
+
    for (let i = 0; i < userResponseLevel1.length; i++) {
        let stringUserRespLevel1 = []
        stringUserRespLevel1.push(userResponseLevel1[i].classList[1])

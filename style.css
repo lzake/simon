@@ -5,15 +5,11 @@ header{
     grid-row: 1;
     align-items: end;
     text-align: center;
-    /* border: 1px #303030 solid; */
 }
-
-/* As with align-self and align-items, you can apply justify-items to the grid container, to set the justify-self value for all items. */
 
 main{
     grid-column: 1;
     grid-row: 2;
-    /* border: 1px #303030 solid; */
     list-style: none;
 }
 
@@ -47,35 +43,29 @@ h1{
     grid-column: 2;
     grid-row: 1;
     background-color: #F53240;
-    /* background-color: #EDA917; */
     border-top-right-radius: 100%;
-
-
-  }
+}
   
-  .blue{
+.blue{
     grid-column: 2;
     grid-row: 2;
     background-color: #7cdbd5;
-    /* background-color: #ED8517; */
     border-bottom-right-radius: 100%;
   }
   
-  .yellow{
+.yellow{
     grid-column: 1;
     grid-row: 2;
     background-color: #F9BE02;
-    /* background-color: #ED5417; */
     border-bottom-left-radius: 100%;
-  }
+}
   
-  .green{
+.green{
     grid-column: 1; 
     grid-row: 1;
     background-color: rgb(40, 160, 140);
-    /* background-color: #ED1762; */
     border-top-left-radius: 100%;
-  }
+}
 
 nav{
     display: flex;
@@ -83,7 +73,6 @@ nav{
     grid-column: 1;
     grid-row: 3;
     margin: 40px;
-    /* border: 1px #303030 solid; */
 }
 
 body{
