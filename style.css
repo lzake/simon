@@ -29,11 +29,7 @@ h1{
 }
 
 .buttonLevel, .buttonInfo{
-<<<<<<< HEAD
     font-size: 32px;
-=======
-    font-size: 30px;
->>>>>>> 5a42427961a67ca197936f1745fd18253e37089b
     color: #303030;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
