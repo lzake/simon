@@ -1,79 +1,44 @@
 
-
-// defines color buttons in array
-let buttons = document.querySelectorAll(".button")
-
-
-// computer generated level 1 sequence
-let sequenceLevel1 = []
+let buttons = document.querySelectorAll(".button") // defines color buttons in array
+let sequenceLevel = [] // computer generated level 1 sequence
+let userResponseLevel = [] // defines level 1 user response
+let playButton = document.querySelector(".buttonPlay")
+// event listener and handler for play button
+playButton.addEventListener('click', function(){showIndicatorsInSequence(sequenceLevel)})
+// event listeners and handlers for color buttons
+for(i = 0;1<4;i++){
+buttons[i].addEventListener('click', function() { receiveUserColorButtonPress(buttons[i]) })
+}
 for (let i = 0; i <= 3; i++) {
-    sequenceLevel1.push(buttons[Math.floor(Math.random() * buttons.length)])
+    sequenceLevel.push(buttons[Math.floor(Math.random() * buttons.length)])
 }   
 
-
-// defines level 1 user response
-let userResponseLevel1 = []
-
-
-// defines play button
-let playButton = document.querySelector(".buttonPlay")
-
-
-// event listener and handler for play button
-playButton.addEventListener('click', function(){showIndicatorsInSequence(sequenceLevel1)})
-
-
-// event listeners and handlers for color buttons
-buttons[0].addEventListener('click', function() { receiveUserColorButtonPress(buttons[0]) })
-
-buttons[1].addEventListener('click', function() { receiveUserColorButtonPress(buttons[1]) })
-
-buttons[2].addEventListener('click', function() { receiveUserColorButtonPress(buttons[2]) })
-
-buttons[3].addEventListener('click', function() { receiveUserColorButtonPress(buttons[3]) })
-
-
-function setButtonOpacityFull(colorButton) {
-    colorButton.style.opacity = 1;
-}
-
-
-function setButtonOpacityHalf(colorButton) {
-    colorButton.style.opacity = 0.5;
-}
-
-
-function receiveUserColorButtonPress(colorButton) {
+setButtonOpacityFull = colorButton => colorButton.style.opacity = 1
+setButtonOpacityHalf = colorButton => colorButton.style.opacity = 0.5
+receiveUserColorButtonPress = colorButton =>{
     setButtonOpacityHalf(colorButton);
     setTimeout(
         function() {
             setButtonOpacityFull(colorButton)
-        }, 200
+        }, 400
     )
-
-    // store click order by pushing colorButton to array
-    userResponseLevel1.push(colorButton);
-    if (userResponseLevel1.length === sequenceLevel1.length) {
+    userResponseLevel.push(colorButton);     // store click order by pushing colorButton to array
+    if (userResponseLevel.length === sequenceLevel.length) {
         checkForMatch()
     }
-    
 }
-
-
 function checkForMatch() {
-   for (let i = 0; i < sequenceLevel1.length; i++) {
-       let stringSeqLevel1 = []
-       stringSeqLevel1.push(sequenceLevel1[i].classList[1])
-       joinedSeqLevel1 = stringSeqLevel1.join()
+   for (i in sequenceLevel) {
+       let stringSeqLevel = []
+       stringSeqLevel.push(sequenceLevel[i].classList[1])
+       joinedSeqLevel = stringSeqLevel.join()
    }
-
-   for (let i = 0; i < userResponseLevel1.length; i++) {
-       let stringUserRespLevel1 = []
-       stringUserRespLevel1.push(userResponseLevel1[i].classList[1])
-       joinedUserRespLevel1 = stringUserRespLevel1.join()
+   for (i in userResponseLevel) {
+       let stringUserRespLevel = []
+       stringUserRespLevel.push(userResponseLevel[i].classList[1])
+       joinedUserRespLevel = stringUserRespLevel.join()
    }
-
-    if (joinedSeqLevel1 === joinedUserRespLevel1) {
+    if (joinedSeqLevel === joinedUserRespLevel) {
         alert('You win!')
     } else {
         alert('Try again!')
@@ -81,7 +46,7 @@ function checkForMatch() {
 }
 
 
-function flashColorButtonIndicator(colorButton) {
+flashColorButtonIndicator = colorButton => {
     setButtonOpacityHalf(colorButton);
     setTimeout(
         function() {
@@ -91,10 +56,10 @@ function flashColorButtonIndicator(colorButton) {
 }
 
 
-function showIndicatorsInSequence(levelArray) {
-    for (let i = 0; i < levelArray.length; i++) {
+showIndicatorsInSequence = levelArray=> {
+    for (i in levelArray) {
         let delay = (1000 * i) + 500;
-        setTimeout( function() {
+        setTimeout(() => {
             flashColorButtonIndicator(levelArray[i])
         }, delay)
     }
